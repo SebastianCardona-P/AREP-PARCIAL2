@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Parcial 2</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    
+    <h1>CATALAN</h1>
+    <form action="/catalan">
+      <label for="valueCatalan">Value:</label><br />
+      <input
+        type="number"
+        id="valueCatalan"
+        name="valueCatalan"
+        placeholder="15"
+      /><br /><br />
+      <input type="button" value="Submit" onclick="loadCatalan(valueCatalan)" />
+    </form>
+
+    <div id="getCatalan"></div>
+
+    <script>
+      function loadCatalan(name) {
+        let url = "/catalan?value=" + name.value;
+        fetch(url, { method: "GET" })
+          .then((x) => x.text())
+          .then((y) => (document.getElementById("getCatalan").innerHTML = y));
+      }
+    </script>
+  </body>
+</html>
