@@ -30,7 +30,7 @@ public class BackController {
         response.put("input", value);
         response.put("output", listCatalan);
 
-        System.out.println("Hiciste la petición desde el backend 1");
+        System.out.println("Hiciste la petición desde el backend 2");
 
         return ResponseEntity.ok(response);
     }
