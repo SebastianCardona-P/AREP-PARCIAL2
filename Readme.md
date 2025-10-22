@@ -5,21 +5,21 @@
 
 ### Imagenes antes de falla
 1. imagen del front desplegado normal sin fallas:
-![AntesProxi](img\principalProxyIndex.png)
+![AntesProxi](img/principalProxyIndex.png)
 2. Logs del proxy funcionando normalmente
-![AntesProxi](img\logsProxyAntesPruebaFallo.png)
+![AntesProxi](img/logsProxyAntesPruebaFallo.png)
 3. logs backend 2 funcionando normalmente, actual es quien recibe todas las peticiones:
-![AntesBack2](img\logsBackend2AntesPruebaFallo.png)
+![AntesBack2](img/logsBackend2AntesPruebaFallo.png)
 4. logs backend 2 funcionando normalmente, actual es el pasivo y disponible ante fallos de backend 2:
-![AntesBack1](img\logsBackend1AntesPruebaFallo.png)
+![AntesBack1](img/logsBackend1AntesPruebaFallo.png)
 5. Pagamos Back 2
-![despuesBack2](img\logsBackend2FalloYApago.png)
+![despuesBack2](img/logsBackend2FalloYApago.png)
 6. Probamos hacer petición al proxy nuevamente desde el html
-![despueshtml](img\nuevaPeticiónConFallo.png)
+![despueshtml](img/nuevaPeticiónConFallo.png)
 7. Revisamos los logs del proxy desplegado
-![despuesproxylogs](img\logsProxyDespuesFallo.png)
+![despuesproxylogs](img/logsProxyDespuesFallo.png)
 8. Revisamos los logs del backend1 desplegado, ahora el principal
-![despuesbackend1logs](img\logsBacken1DespuesFallo.png)
+![despuesbackend1logs](img/logsBacken1DespuesFallo.png)
 
 
 # Correr localmente
@@ -35,5 +35,7 @@ mvn spring-boot:run
 4. vaya a http://localhost:8083/
 5. haga pruebas
 
+# Video demostrativo
+consulte: [https://youtube.com/shorts/8D3dg2sq8PI?si=rsbd7LUDRu4mbEdT](https://youtube.com/shorts/8D3dg2sq8PI?si=rsbd7LUDRu4mbEdT)
 
  
