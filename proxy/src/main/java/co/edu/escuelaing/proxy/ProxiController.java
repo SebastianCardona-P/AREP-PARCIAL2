@@ -21,34 +21,37 @@ public class ProxiController {
 
     @GetMapping("/catalan")
     public String getCatalan(@RequestParam(name = "value") int value) throws IOException {
-        System.out.println("Consulta a server: " + serversURL[indexUrl]);
-        String url = serversURL[indexUrl] + "catalan?value=" + value;
-        URL obj = new URL(url);
-        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-        System.out.println("Hice bien con con httpurl: ");
-        con.setRequestMethod("GET");
-        System.out.println("Hice bien get: ");
-
-        con.setRequestProperty("User-Agent", USER_AGENT);
-        System.out.println("Hice bien userAgent: ");
-
         int responseCode;
-
+        URL obj;
+        HttpURLConnection con;
         try {
+            System.out.println("Consulta a server: " + serversURL[indexUrl]);
+            String url = serversURL[indexUrl] + "catalan?value=" + value;
+            obj = new URL(url);
+            con = (HttpURLConnection) obj.openConnection();
+            System.out.println("Hice bien con con httpurl: ");
+            con.setRequestMethod("GET");
+            System.out.println("Hice bien get: ");
+
+            con.setRequestProperty("User-Agent", USER_AGENT);
+            System.out.println("Hice bien userAgent: ");
+
+            
+
+            
             responseCode = con.getResponseCode();
         } catch (Exception e) {
             System.out.println("Hice mal getResponseCode pues fallo este server, debo cambairlo: ");
             System.out.println("El server " + serversURL[indexUrl] + " fallo, debo cambiar al otro server ya mismooo");
-            System.out.println("Consulta a server: " + serversURL[indexUrl]);
             indexUrl++;
             System.out.println("Ahora consulta a server: " + serversURL[indexUrl % serversURL.length]);
-            String url1 = serversURL[indexUrl % serversURL.length] + "catalan?value=" + value;
-            URL obj1 = new URL(url1);
-            HttpURLConnection con1 = (HttpURLConnection) obj1.openConnection();
-            con1.setRequestMethod("GET");
-            con1.setRequestProperty("User-Agent", USER_AGENT);
+            String url = serversURL[indexUrl % serversURL.length] + "catalan?value=" + value;
+            obj = new URL(url);
+            con = (HttpURLConnection) obj.openConnection();
+            con.setRequestMethod("GET");
+            con.setRequestProperty("User-Agent", USER_AGENT);
 
-            responseCode = con1.getResponseCode();
+            responseCode = con.getResponseCode();
         }
         System.out.println("Hice bien getResponseCode: ");
 
