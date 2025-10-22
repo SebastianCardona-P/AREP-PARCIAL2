@@ -1,5 +1,7 @@
 ## Parcial 2 Sebastian Cardona Parra AREP
 
+# Video demostrativo
+consulte: [https://youtube.com/shorts/8D3dg2sq8PI?si=rsbd7LUDRu4mbEdT](https://youtube.com/shorts/8D3dg2sq8PI?si=rsbd7LUDRu4mbEdT)
 
 ## Imagenes de prueba
 
